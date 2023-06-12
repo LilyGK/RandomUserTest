@@ -21,6 +21,12 @@ export const UserItems = {
 
 export const userTitle= '[id="user_title"]'
 export const userValue = '[id="user_value"]'
+export const userPhoto = '[id="user_photo"]'
+export const newButton = '#user_photo > a'
+
+export const userPhotoImg = '#user_photo > img'
+
+
 
 
 
