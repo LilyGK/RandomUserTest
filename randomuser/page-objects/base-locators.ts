@@ -1,0 +1,1 @@
+export type AriaRole = "heading" | "contentinfo" | "listitem";
