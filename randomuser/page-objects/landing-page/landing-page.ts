@@ -1,5 +1,4 @@
 import {Page} from "@playwright/test";
-//import * as locators from "./landing-page-locators";
 import {userPhotoImg,newButton, userPhoto,Title ,userTitle,userValue, UserItems} from "./landing-page-locators";
 
 export default class LandingPage {
@@ -15,8 +14,7 @@ export default class LandingPage {
     }
 
     async verifyTitle() {
-        return this.page.getByRole(Title.infoSectionRole).getByRole(Title.role,
-            {name: Title.name})
+        return this.page.getByRole(Title.infoSectionRole).getByRole(Title.role, {name: Title.name})
     }
 
     async hoverOnEmail() {
@@ -36,34 +34,14 @@ export default class LandingPage {
         return await imageElement?.getAttribute('src')
     }
 
-
-
     async getUserTitle() {
-        const titleElement = this.page.locator(userTitle); // replace '#title' with the actual id of the title element
+        const titleElement = this.page.locator(userTitle);
         return await titleElement?.innerText() || '';
     }
 
     async getUserValue() {
-        const titleElement = await this.page.locator(userValue); // replace '#title' with the actual id of the title element
+        const titleElement =  this.page.locator(userValue);
         return await titleElement?.innerText() || '';
     }
-
-    async waitForTitleChange(page: Page, initialTitle: string): Promise<void> {
-        await page.waitForFunction(
-            (initialTitle) => {
-                const titleElement = document.querySelector('[id="user_title"]');
-                return titleElement && titleElement.textContent !== initialTitle;
-            },
-            initialTitle
-        );
-
-    }
-
-
-
-
-
-
-
 
 }

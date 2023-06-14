@@ -1,6 +1,5 @@
 import {AriaRole} from "../base-locators";
 
-
 export const Title = {
     infoSectionRole: 'contentinfo' as AriaRole,
     role :"heading" as AriaRole,

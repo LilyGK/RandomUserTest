@@ -1,4 +1,4 @@
-import { chromium, test as baseTest } from "@playwright/test";
+import { test as baseTest } from "@playwright/test";
 import LandingPage from "../page-objects/landing-page/landing-page";
 
 type pages = {

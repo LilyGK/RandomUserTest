@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "integration:tests": "npx playwright test --grep '@integration'",
+    "e2e:tests": "npx playwright test --grep '@e2e'",
+    "all:tests": "npx playwright test",
+    "open:ui": "npx playwright test --ui"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
